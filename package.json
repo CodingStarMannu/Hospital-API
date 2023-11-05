@@ -4,7 +4,8 @@
   "description": "Hospital API created for Coding ninja Skill Test",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "author": "Manoj",
   "license": "ISC",
@@ -13,5 +14,8 @@
     "mongoose": "^8.0.0",
     "passport": "^0.6.0",
     "passport-jwt": "^4.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }
