@@ -28,7 +28,7 @@ module.exports.create = async function (req, res){
 
         console.log('Error', err);
 
-        req.status(500).json({
+        res.status(500).json({
             message: 'Internal Server Error'
         });
     }
@@ -60,7 +60,7 @@ module.exports.createSession = async function (req,res){
 
         console.log('Error', err);
 
-        req.status(500).json({
+        res.status(500).json({
             message: 'Internal Server Error'
         });
     }
