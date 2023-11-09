@@ -10,9 +10,9 @@ var opts = {
 }
 
 
-passport.use(new JWTStrategy(opts, async (jwt_payload, done) => {
+passport.use(new JWTStrategy(opts, async (jwtPayload, done) => {
     try {
-      const user = await User.findOne({ id: jwt_payload.sub });
+      const user = await User.findById(jwtPayload._id);
       
       if (user) {
         return done(null, user);

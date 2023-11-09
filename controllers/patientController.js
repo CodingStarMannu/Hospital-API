@@ -1,4 +1,3 @@
-const { connections } = require('mongoose');
 const Report = require('../models/reports');
 const User = require('../models/user');
 
@@ -16,7 +15,7 @@ module.exports.register = async function(req,res){
             });
         }
 
-       user = await User.create({
+        user = await User.create({
             username: req.body.number,
             name:req.body.name,
             password:'12345',
@@ -35,7 +34,6 @@ module.exports.register = async function(req,res){
         });
     }
 }
-
 
 
 module.exports.createReport = async function(req,res){
@@ -81,14 +79,14 @@ module.exports.patientReports = async function(req,res){
             const originalDate = report.date;
             const dateObj = new Date(originalDate);
 
-        const formattedDate = dateObj.toLocalString("en-US",{
-            year: "numeric",
-            month: "2-digit",
-            day: "2-digit",
-            hour: "2-digit",
-            minute: "2-digit",
-            hour12: false
-        });
+            const formattedDate = dateObj.toLocaleString("en-US", {
+                year: "numeric",
+                month: "2-digit",
+                day: "2-digit",
+                hour: "2-digit",
+                minute: "2-digit",
+                hour12: false
+                });
 
         return {
             createdByDoctor: report.createdByDoctor.name,
