@@ -1,4 +1,4 @@
-# Hospital API 
+# Hospital-API 
 
 Welcome to the Hospital API project! This API is designed for doctors and patients to manage COVID-19 testing, quarantine, and patient well-being.
 
